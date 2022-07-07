@@ -1,0 +1,16 @@
+Network Interface:-
+The Network Interface is a Hardware device that is used to route the incoming
+and outgoing traffic which we receive from the internet.
+All the data are passed in the Network Interface.
+The private ip address is used for the internal communication between the Network Interfaces.
+whereas public ip address is used for the external communication. The public ip address
+is assigned by the azure we dont have the control to assign the public ip address.
+it is assigned by the azure.
+IP Address Overview:-
+Let us take a Ip Address as 19.10.118.41
+first take 41=41-32=9-8=1
+128 64 32 16 8 4 2 1
+0	0	1  1 1 0 0 1	
+0	1	1  1 0 1 1 0
+0	0   0  0 1 0 1 0
+0	0   0  1 0 0 1 1
