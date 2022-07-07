@@ -1,0 +1,86 @@
+Azure Market Place:-
+This place is used to have all the services that azure provides
+Resource Group:-
+Resource group is used for logical grouping of the Resources.
+Suppose we have a virtual machine, Database, Virtual Network we can assign these services
+in a single resource group. so that we can access all our resources in a single place.
+If we dont the resource we can delete all the resouces at a time.
+Ex:- Suppose we have a multiple departments. we can group the resources according
+to the resource.
+After creating virtual Machine.We can Login into the virtual machine through RDP, 
+If the server is windows based one or we can login into the virtual machine through SSh
+if the server is a Linux based one.
+To access the server machine. We need a port called 80. Through the 80 port only we can
+access the virtual machine in the internet. This can be enabled in the network security
+group. after enabling we can send request and get the response from the virtual machine.
+If we want to access the web server we need to install in the virtual machine.
+Goto-> search bar->search server manager Goto Add Role. Choose role based.
+Web server(IIS)Internet information services.This services is provided in the windows 
+server for enabling the internet based services.
+Sometimes we may forgot to delete the vm which we have created. We may have a budget
+of the resources we create in the virtual. So the budget should not exceed. for that
+we can create a budget for the resources we create.
+For creating a Budget. Goto the Subscription->Select Budget Tab.
+Give the Budget name and set the actual budget ex:-80%. when we exceed 80% it will send 
+a alert to us that we have exceeded the budget.
+We have two disks in the virtual machine when we create it.
+So the OS is installed in the C drive of the vm.So the disks in the C drive, we be remain.
+so please provide the important data in the c drive.
+The temporary disk is lost when we terminate the instance.sometimes while maintainces
+in the server the data in the temporary disk will be lost.
+Creating the Linux VM:-
+Same process as we created the windows server vm. Here the default ssh is enabled.
+Because to connect the linux vm we need ssh port to be enabled.
+Linux vm can be accessed through putty.
+Drives:-
+SSD:- Solid State Drives
+HHD:-Hybrid hard Drives.
+HHD:- It is used for Backup and not for critical workloads.
+SSD:- It is used for Dev/Test Environment.
+Premium SSD:-It is used for the Production Environment.
+Ultra Disk:- It is used for the Database such as oracle, MySql. Where we access a largre
+number of IOPS(Input and Output Operations).
+Premium SSD is not supported in some of the virtual machine.
+So we need to select the VM which support the Premium SSD for the Production based environment
+Understanding of IOPS and Throughput:-
+IOPS means Input and Ouput Operations per second.
+When we launch the SQL Server in the windows vm. In the SQL server we will do more
+read and write operations in the server. So the OS disk will play a key role in this 
+operations. It will connect the SQL server which is installed in the OS disk drive.
+So the OS disk drive will perform the Input and Output Operations.If the Input and 
+Output operations are more then the OS disk drive will be slow in performing
+the operation. So If the IOPS is more then this process will perform effeciently.
+Throughput:-
+When we want to store files like videos and pictures in the disk.i.e the throughput plays a 
+main role in the storing the files.if the throughput is less then accessing of large
+files from the disk will be hard. So if the throughtput is more then accessing the
+videos files will be easy.
+SnapShot:-
+We can take the snapshot of the disk which we installized in the one VM to other vm.
+This can be done by creating a snapshot.
+When we initialize the disk in second vm there will be option of attaching the snapshop.
+It is very easy to copy the disk from one vm to another vm through snapshot.
+Shared Disk:-
+We can share a single disk to two vm. By attaching the same disk to two vm.
+It is important to stop the first vm when we attach the disk to second vm. If we
+dont stop the first vm and attach the disk to second vm we will get the error.
+UnManaged Disk:-
+All Disks are managed by azure when we create the azure vm.
+So we can manage the disk by check as No when we create the disk. It will store in the
+Storage account as blob file.
+Custom Script Extension:-
+We need to manually enable the IIS in the webserver. This can be done through a custom 
+Shell Script.
+First step we need to create a storage account. In that we need to place in the container to
+access the script file.  In creating the vm we will have a advance setting. In the
+Extension tab we can add the script in the extension this shell script can run automatically
+and run in the vm and installed.
+Azure Web App Service:-
+It is a Paas service where we can launch our web app in the vm. We dont want to create
+and manage the vm. It will automatically create and managed by the azure.
+we can trace the application log and web server logs in the app service of azure.
+we can create our custom domain in the web app service.
+so to have a custom domain we need to own our domain from any of the service provider.
+ex:-godaddy.
+after owning the domain we can link to our web app.
+in web app service->custom domain we can link it.
