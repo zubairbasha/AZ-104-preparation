@@ -46,4 +46,3 @@ Once you enable virtual network peering between two virtual networks, the virtua
 You can also peer virtual networks that are located across different subscriptions.
 
 The virtual networks can't have overlapping CIDR blocks.
-Virtual Private network:-
